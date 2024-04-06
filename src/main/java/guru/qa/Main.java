@@ -27,16 +27,14 @@ public class Main {
         System.out.println("Linked list");
         System.out.println("Hash set");
         System.out.println("Hash map");
-        System.out.println("Priority queue");
-        System.out.println();
-        System.out.println();
+        System.out.println("Priority queue\n");
         System.out.println("Please insert length for data collections");
 
         return console.nextInt();
     }
 
     private static void executeBasicLinkedListFunctionality() {
-        IntLinkedList intLinkedList = new IntLinkedList(new LinkedList<>());
+        IntLinkedList intLinkedList = new IntLinkedList();
         intLinkedList.fillLinkedListWithRandomIntValues(length);
         intLinkedList.addElement(TestData.LINKED_LIST_TEST_VALUE1, middle);
         intLinkedList.addElement(TestData.LINKED_LIST_TEST_VALUE2, middle);
@@ -46,7 +44,7 @@ public class Main {
     }
 
     private static void executeBasicHashSetAndHashMapFunctionality() {
-        PhoneNumbersHashSet phoneNumbersHashSet = new PhoneNumbersHashSet(new HashSet<String>());
+        PhoneNumbersHashSet phoneNumbersHashSet = new PhoneNumbersHashSet();
         phoneNumbersHashSet.fillHashSet(length);
         phoneNumbersHashSet.addElement(TestData.HASH_SET_MOBILE_NUMBER1);
         phoneNumbersHashSet.addElement(TestData.HASH_SET_MOBILE_NUMBER2);
@@ -54,7 +52,7 @@ public class Main {
         phoneNumbersHashSet.removeElement(TestData.HASH_SET_MOBILE_NUMBER1);
         phoneNumbersHashSet.logValues();
 
-        PhonebookHashmap phonebookHashMap = new PhonebookHashmap(new HashMap<>());
+        PhonebookHashmap phonebookHashMap = new PhonebookHashmap();
         phonebookHashMap.fillHashmapWithRandomValues(phoneNumbersHashSet.getHashSet());
         phonebookHashMap.addElement(TestData.HASH_MAP_MOBILE_NUMBER, TestData.HASH_MAP_FULL_NAME);
         phonebookHashMap.searchElementByValue(TestData.HASH_MAP_FULL_NAME);
@@ -63,7 +61,7 @@ public class Main {
     }
 
     public static void executeBasicPriorityQueueFunctionality() {
-        CarsPriorityQueue carsPriorityQueue = new CarsPriorityQueue(new PriorityQueue<>());
+        CarsPriorityQueue carsPriorityQueue = new CarsPriorityQueue();
         carsPriorityQueue.fillPriorityQueue();
         carsPriorityQueue.addElement(TestData.PRIORITY_QUEUE_TEST_CAR_NAME);
         carsPriorityQueue.searchElementByValue(TestData.PRIORITY_QUEUE_TEST_CAR_NAME);

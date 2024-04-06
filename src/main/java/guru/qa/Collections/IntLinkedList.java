@@ -3,16 +3,17 @@ package guru.qa.Collections;
 import guru.qa.Utils.DataGenerator;
 import guru.qa.Utils.TestData;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Logger;
 
 public class IntLinkedList {
     Logger logger = Logger.getLogger(IntLinkedList.class.getName());
     DataGenerator dataGenerator = new DataGenerator();
-    private List<Integer> integerList;
+    private final List<Integer> integerList;
 
-    public IntLinkedList(List<Integer> integerList) {
-        this.integerList = integerList;
+    public IntLinkedList() {
+        this.integerList = new LinkedList<>();
     }
 
     public void fillLinkedListWithRandomIntValues(int length) {
@@ -44,7 +45,6 @@ public class IntLinkedList {
     }
 
     public void addElement(int newValue, int index) {
-
         integerList.add(index, newValue);
         logger.info("Value " + newValue + " added to the linked list");
     }

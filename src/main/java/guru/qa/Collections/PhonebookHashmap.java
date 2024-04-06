@@ -12,10 +12,10 @@ public class PhonebookHashmap {
     Logger logger = Logger.getLogger(PhonebookHashmap.class.getName());
     DataGenerator dataGenerator = new DataGenerator();
 
-    private HashMap<String, String> phonebook;
+    private final HashMap<String, String> phonebook;
 
-    public PhonebookHashmap(HashMap<String, String> phonebook) {
-        this.phonebook = phonebook;
+    public PhonebookHashmap() {
+        this.phonebook = new HashMap<>();
     }
 
     public void fillHashmapWithRandomValues(HashSet<String> phoneNumbersHashSet) {
@@ -28,7 +28,7 @@ public class PhonebookHashmap {
 
     public void logValues() {
         for (Map.Entry entry : phonebook.entrySet()) {
-            System.out.println(entry);
+            logger.info(entry.toString());
         }
     }
 

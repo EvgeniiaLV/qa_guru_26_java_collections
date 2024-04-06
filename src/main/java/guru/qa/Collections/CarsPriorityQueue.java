@@ -9,8 +9,8 @@ public class CarsPriorityQueue {
     private PriorityQueue<String> carsPriorityQueue;
     private Iterator iterator;
 
-    public CarsPriorityQueue(PriorityQueue<String> carsPriorityQueue) {
-        this.carsPriorityQueue = carsPriorityQueue;
+    public CarsPriorityQueue() {
+        this.carsPriorityQueue = new PriorityQueue<>();
     }
 
     public void fillPriorityQueue() {

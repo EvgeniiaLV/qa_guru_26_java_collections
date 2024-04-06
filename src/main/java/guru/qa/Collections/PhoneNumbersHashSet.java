@@ -9,10 +9,10 @@ import java.util.logging.Logger;
 public class PhoneNumbersHashSet {
     Logger logger = Logger.getLogger(PhoneNumbersHashSet.class.getName());
     DataGenerator dataGenerator = new DataGenerator();
-    private HashSet<String> phoneNumbers;
+    private final HashSet<String> phoneNumbers;
 
-    public PhoneNumbersHashSet(HashSet<String> phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
+    public PhoneNumbersHashSet() {
+        this.phoneNumbers = new HashSet<>();
     }
 
     public void fillHashSet(int length) {
@@ -46,11 +46,9 @@ public class PhoneNumbersHashSet {
             for (String mobileNumber : phoneNumbers) {
                 if (mobileNumber.equals(value))
                     logger.info(value + " found in the hashset");
-                return;
             }
         }
         logger.info(value + " wasn't found in the hashset");
-        return;
     }
 
     public HashSet<String> getHashSet() {
