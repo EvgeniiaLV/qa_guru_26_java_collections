@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class IntLinkedList {
+    private final List<Integer> integerList;
     Logger logger = Logger.getLogger(IntLinkedList.class.getName());
     DataGenerator dataGenerator = new DataGenerator();
-    private final List<Integer> integerList;
 
     public IntLinkedList() {
         this.integerList = new LinkedList<>();
@@ -35,9 +35,9 @@ public class IntLinkedList {
 
     public void searchElementByValue(int searchValue) {
         logger.info("Searching value " + searchValue + " in the linked list started");
-        for (int listValue : integerList) {
-            if (listValue == searchValue) {
-                logger.info("Element " + listValue + " found");
+        for (int i = 0; i < integerList.size(); i++) {
+            if (integerList.get(i) == searchValue) {
+                logger.info("Element " + searchValue + " found");
                 return;
             }
         }
